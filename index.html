@@ -1,194 +1,261 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>BM Patil - Portfolio</title>
     <link rel="stylesheet" href="style1.css" />
-  </head>
+</head>
 
-  <body>
+<body>
+    <style>
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #333;
+            color: white;
+            padding: 1rem;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 2rem;
+            cursor: pointer;
+            color: white;
+        }
+
+        .sidebar {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 250px;
+            background: #444;
+            padding: 2rem 1rem;
+            box-shadow: 2px 0 8px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+
+        .sidebar.active {
+            display: block;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 1rem 0;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .menu-toggle {
+                display: block;
+            }
+        }
+    </style>
     <header class="navbar">
-      <div class="logo">BM Patil</div>
+        <div class="logo">BM Patil</div>
 
-      <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
-        ☰
-      </button>
-      <!-- Sidebar -->
-      <div id="sidebar" class="sidebar">
-        <ul>
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Menu">
+            ☰
+        </button>
 
-      <nav>
-        <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#skills">Skills</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#services">Services</a></li>
-          <li><a href="#testimonials">Testimonials</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#services">Services</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div id="sidebar" class="sidebar">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </header>
 
+
     <section id="hero" class="hero-section">
-      <h1>Building Smarter. Delivering Better.</h1>
-      <p>
-        I’m Bhagvat Mutthe—a full-stack developer who transforms ideas into
-        powerful, user-focused digital solutions.
-      </p>
-      <a href="#projects" class="cta-button">View My Work</a>
+        <h1>Building Smarter. Delivering Better.</h1>
+        <p>
+            I’m Bhagvat Mutthe—a full-stack developer who transforms ideas into
+            powerful, user-focused digital solutions.
+        </p>
+        <a href="#projects" class="cta-button">View My Work</a>
     </section>
 
     <section id="about" class="about-section">
-      <h2>About Me</h2>
-      <p>
-        I'm a dedicated full-stack developer specializing in transforming
-        complex ideas into intuitive, user-friendly applications. With expertise
-        in web and mobile development, I prioritize user experience and
-        performance. Beyond coding, I am passionate about teaching programming
-        and empowering others through knowledge sharing.
-      </p>
-      <p>
-        My technical journey spans across diverse domains, from crafting
-        advanced job portals to building secure VPN systems and attendance
-        management solutions. I believe in the power of technology to solve
-        real-world problems and consistently strive to deliver robust and
-        scalable software solutions.
-      </p>
-      <p>
-        Driven by innovation, I recently embarked on a mission to establish a
-        tech firm offering custom software solutions and technical consultation
-        for both small businesses and large enterprises. My goal is to bridge
-        the gap between technology and business needs through strategic
-        development and collaboration.
-      </p>
-      <p>
-        When I'm not coding, I enjoy mentoring aspiring developers, sharing my
-        insights on software architecture, and exploring new technological
-        trends to stay ahead in the ever-evolving digital landscape.
-      </p>
+        <h2>About Me</h2>
+        <p>
+            I'm a dedicated full-stack developer specializing in transforming
+            complex ideas into intuitive, user-friendly applications. With expertise
+            in web and mobile development, I prioritize user experience and
+            performance. Beyond coding, I am passionate about teaching programming
+            and empowering others through knowledge sharing.
+        </p>
+        <p>
+            My technical journey spans across diverse domains, from crafting
+            advanced job portals to building secure VPN systems and attendance
+            management solutions. I believe in the power of technology to solve
+            real-world problems and consistently strive to deliver robust and
+            scalable software solutions.
+        </p>
+        <p>
+            Driven by innovation, I recently embarked on a mission to establish a
+            tech firm offering custom software solutions and technical consultation
+            for both small businesses and large enterprises. My goal is to bridge
+            the gap between technology and business needs through strategic
+            development and collaboration.
+        </p>
+        <p>
+            When I'm not coding, I enjoy mentoring aspiring developers, sharing my
+            insights on software architecture, and exploring new technological
+            trends to stay ahead in the ever-evolving digital landscape.
+        </p>
     </section>
 
     <section id="skills" class="about-section">
-      <h2>Skills</h2>
-      <p>
-        Core Technologies: Java, OOP, SQL, ReactJS, Next.js, MongoDB, C++,
-        HTML5, CSS3, JavaScript
-      </p>
-      <p>
-        Frameworks & Tools: Node.js, MySQL, Jetpack Compose (Android), Java EE,
-        React, Angular
-      </p>
-      <p>
-        DevOps & Cloud: Docker, Kubernetes, AWS (EC2, S3, RDS), CI/CD, GitHub
-        Actions
-      </p>
-      <p>
-        Special Expertise: Web Development, Full-Stack Solutions, Cloud
-        Deployment
-      </p>
+        <h2>Skills</h2>
+        <p>
+            Core Technologies: Java, OOP, SQL, ReactJS, Next.js, MongoDB, C++,
+            HTML5, CSS3, JavaScript
+        </p>
+        <p>
+            Frameworks & Tools: Node.js, MySQL, Jetpack Compose (Android), Java EE,
+            React, Angular
+        </p>
+        <p>
+            DevOps & Cloud: Docker, Kubernetes, AWS (EC2, S3, RDS), CI/CD, GitHub
+            Actions
+        </p>
+        <p>
+            Special Expertise: Web Development, Full-Stack Solutions, Cloud
+            Deployment
+        </p>
     </section>
 
     <section id="projects" class="projects-section">
-      <h2>Projects</h2>
-      <div class="project-card">
-        <h3>Vidyank (Freelance Project)</h3>
-        <p>
-          An online platform empowering students to prepare for competitive
-          exams like JEE, NEET, and MHT-CET with mock tests, performance
-          analysis, and expert guidance.
-        </p>
-        <a href="https://vidyank.com/" target="_blank">Visit Vidyank</a>
-      </div>
+        <h2>Projects</h2>
+        <div class="project-card">
+            <h3>Vidyank (Freelance Project)</h3>
+            <p>
+                An online platform empowering students to prepare for competitive
+                exams like JEE, NEET, and MHT-CET with mock tests, performance
+                analysis, and expert guidance.
+            </p>
+            <a href="https://vidyank.com/" target="_blank">Visit Vidyank</a>
+        </div>
 
-      <div class="project-card">
-        <h3>CareerQuest (Personal Project)</h3>
-        <p>
-          An advanced job portal offering job listings, company profiles, and
-          user profiles with robust search capabilities.
-        </p>
-        <a href="https://github.com/TheBMPatil/CareerQuest" target="_blank"
-          >View on GitHub</a
-        >
-        <!-- <a href="https://bm-patil-career-quest.netlify.app/" target="_blank">Visit website</a> -->
-      </div>
-      <div class="project-card">
-        <h3>Sinhgad UniGuide (Collage Project)</h3>
-        <p>
-          An Android app (React Native, Firebase, REST API) enhancing student
-          engagement by streamlining access to essential campus services and
-          optimizing the college experience.
-        </p>
-        <a
-          href="https://github.com/TheBMPatil2/Sinhgad-uniguide"
-          target="_blank"
-          >View on GitHub</a
-        >
-      </div>
+        <div class="project-card">
+            <h3>CareerQuest (Personal Project)</h3>
+            <p>
+                An advanced job portal offering job listings, company profiles, and
+                user profiles with robust search capabilities.
+            </p>
+            <a href="https://github.com/TheBMPatil/CareerQuest" target="_blank">View on GitHub</a>
+            <!-- <a href="https://bm-patil-career-quest.netlify.app/" target="_blank">Visit website</a> -->
+        </div>
+        <div class="project-card">
+            <h3>Sinhgad UniGuide (Collage Project)</h3>
+            <p>
+                An Android app (React Native, Firebase, REST API) enhancing student
+                engagement by streamlining access to essential campus services and
+                optimizing the college experience.
+            </p>
+            <a href="https://github.com/TheBMPatil2/Sinhgad-uniguide" target="_blank">View on GitHub</a>
+        </div>
 
-      <div class="project-card">
-        <h3>COVID Vaccination Center Locator (Collage Project)</h3>
-        <p>
-          An Android app (Kotlin, Volley) enabling real-time discovery of
-          vaccination centers based on user PIN, improving public access to
-          critical healthcare information.
-        </p>
-        <a
-          href="https://github.com/TheBMPatil/covid_Vaccination_by_pin"
-          target="_blank"
-          >View on GitHub</a
-        >
-      </div>
-      <div class="project-card">
-        <h3>News App (Android) (Personal Project)</h3>
-        <p>
-          An Android news application built with Kotlin and Jetpack Compose,
-          offering user interest-based news curation.
-        </p>
-        <a
-          href="https://github.com/TheBMPatil/News_Application_Android_Kotlin"
-          target="_blank"
-          >View on GitHub</a
-        >
-      </div>
+        <div class="project-card">
+            <h3>COVID Vaccination Center Locator (Collage Project)</h3>
+            <p>
+                An Android app (Kotlin, Volley) enabling real-time discovery of
+                vaccination centers based on user PIN, improving public access to
+                critical healthcare information.
+            </p>
+            <a href="https://github.com/TheBMPatil/covid_Vaccination_by_pin" target="_blank">View on GitHub</a>
+        </div>
+        <div class="project-card">
+            <h3>News App (Android) (Personal Project)</h3>
+            <p>
+                An Android news application built with Kotlin and Jetpack Compose,
+                offering user interest-based news curation.
+            </p>
+            <a href="https://github.com/TheBMPatil/News_Application_Android_Kotlin" target="_blank">View on GitHub</a>
+        </div>
     </section>
 
     <section id="services" class="services-section">
-      <h2>Services</h2>
-      <p>
-        I offer a range of technology services to meet diverse business needs:
-      </p>
-      <ul>
-        <li>Full-Stack Web and Mobile Development</li>
-        <li>Custom Software Solutions for Small Businesses</li>
-        <li>Cloud Deployment and Management</li>
-        <li>Database Design and Implementation</li>
-        <li>Tech Consulting and Project Outsourcing for Enterprises</li>
-      </ul>
+        <h2>Services</h2>
+        <p>
+            I offer a range of technology services to meet diverse business needs:
+        </p>
+        <ul>
+            <li>Full-Stack Web and Mobile Development</li>
+            <li>Custom Software Solutions for Small Businesses</li>
+            <li>Cloud Deployment and Management</li>
+            <li>Database Design and Implementation</li>
+            <li>Tech Consulting and Project Outsourcing for Enterprises</li>
+        </ul>
     </section>
 
     <section id="testimonials" class="testimonials-section">
-      <h2>Testimonials</h2>
-      <blockquote>
-        <p>
-          "Bhagvat's innovative solutions and technical expertise transformed
-          our business operations. Highly recommended! Efficient, reliable, and
-          dedicated to delivering top-quality software—working with Bhagvat was
-          a game-changer."
-        </p>
-        <cite>
-          - Project : Vidyank - Intellisys IT Solutions Private Limited
-        </cite>
-      </blockquote>
-      <!-- <blockquote>
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>
+                "Bhagvat's innovative solutions and technical expertise transformed
+                our business operations. Highly recommended! Efficient, reliable, and
+                dedicated to delivering top-quality software—working with Bhagvat was
+                a game-changer."
+            </p>
+            <cite>
+                - Project : Vidyank - Intellisys IT Solutions Private Limited
+            </cite>
+        </blockquote>
+        <!-- <blockquote>
             <p>"Efficient, reliable, and dedicated to delivering top-quality software—working with Bhagvat was a
                 game-changer."</p>
             <cite>- Client B</cite>
@@ -196,47 +263,52 @@
     </section>
 
     <section id="contact" class="contact-section">
-      <h2>Contact Me</h2>
-      <p>
-        Feel free to reach out for collaborations, consultations, or just a
-        friendly hello!
-      </p>
-      <a href="mailto:bmpatil.dev@gmail.com" class="contact-button">Email Me</a>
-      <div class="social-links">
-        <a href="https://github.com/TheBMPatil" target="_blank">GitHub</a> |
-        <a href="https://www.linkedin.com/in/thebmpatil" target="_blank"
-          >LinkedIn</a
-        >
-      </div>
+        <h2>Contact Me</h2>
+        <p>
+            Feel free to reach out for collaborations, consultations, or just a
+            friendly hello!
+        </p>
+        <a href="mailto:bmpatil.dev@gmail.com" class="contact-button">Email Me</a>
+        <div class="social-links">
+            <a href="https://github.com/TheBMPatil" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/thebmpatil" target="_blank">LinkedIn</a>
+        </div>
     </section>
 
     <footer class="footer">
-      <p>&copy; 2025 BM Patil. All Rights Reserved.</p>
+        <p>&copy; 2025 BM Patil. All Rights Reserved.</p>
     </footer>
     <script>
-      const cursor = document.createElement("div");
-      cursor.className = "cursor";
-      document.body.appendChild(cursor);
+        const cursor = document.createElement("div");
+        cursor.className = "cursor";
+        document.body.appendChild(cursor);
 
-      document.addEventListener("mousemove", (e) => {
-        cursor.style.left = `${e.clientX}px`;
-        cursor.style.top = `${e.clientY}px`;
+        document.addEventListener("mousemove", (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
 
-        const trail = document.createElement("div");
-        trail.className = "cursor-trail";
-        trail.style.left = `${e.clientX}px`;
-        trail.style.top = `${e.clientY}px`;
-        document.body.appendChild(trail);
+            const trail = document.createElement("div");
+            trail.className = "cursor-trail";
+            trail.style.left = `${e.clientX}px`;
+            trail.style.top = `${e.clientY}px`;
+            document.body.appendChild(trail);
 
-        setTimeout(() => trail.remove(), 500);
-      });
+            setTimeout(() => trail.remove(), 500);
+        });
 
-      const menuToggle = document.getElementById("menuToggle");
-      const navLinks = document.getElementById("sidebar");
+        const menuToggle = document.getElementById("menuToggle");
+        const sidebar = document.getElementById("sidebar");
 
-      menuToggle.addEventListener("click", () => {
-        navLinks.classList.toggle("active");
-      });
+        menuToggle.addEventListener("click", () => {
+            sidebar.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebar.classList.remove("active");
+            }
+        });
     </script>
-  </body>
+</body>
+
 </html>
