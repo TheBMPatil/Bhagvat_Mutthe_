@@ -392,3 +392,18 @@ body::after {
     left: 10vw;
     top: 10vh;
 }
+
+/* Hide sidebar by default */
+#sidebar {
+    position: fixed;
+    left: -250px; /* Hidden */
+    width: 250px;
+    height: 100%;
+    background: #007bff;
+    transition: left 0.3s ease;
+}
+
+/* Show sidebar when open */
+#sidebar.open {
+    left: 0;
+}
