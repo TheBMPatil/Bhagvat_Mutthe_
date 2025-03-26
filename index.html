@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BM Patil - Portfolio</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+
+<body>
+
+
+    <header class="navbar">
+        <div class="logo">BM Patil</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#testimonials">Testimonials</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero" class="hero-section">
+        <h1>Welcome to My Portfolio</h1>
+        <p>I am Bhagvat Mutthe, a passionate full-stack developer crafting digital experiences and delivering impactful
+            solutions.</p>
+        <a href="#projects" class="cta-button">View My Work</a>
+    </section>
+
+    <section id="about" class="about-section">
+        <h2>About Me</h2>
+        <p>I'm a dedicated full-stack developer specializing in transforming complex ideas into intuitive, user-friendly
+            applications. With expertise in web and mobile development, I prioritize user experience and performance.
+            Beyond coding, I am passionate about teaching programming and empowering others through knowledge sharing.
+        </p>
+        <p>My technical journey spans across diverse domains, from crafting advanced job portals to building secure VPN
+            systems and attendance management solutions. I believe in the power of technology to solve real-world
+            problems and consistently strive to deliver robust and scalable software solutions.</p>
+        <p>Driven by innovation, I recently embarked on a mission to establish a tech firm offering custom software
+            solutions and technical consultation for both small businesses and large enterprises. My goal is to bridge
+            the gap between technology and business needs through strategic development and collaboration.</p>
+        <p>When I'm not coding, I enjoy mentoring aspiring developers, sharing my insights on software architecture, and
+            exploring new technological trends to stay ahead in the ever-evolving digital landscape.</p>
+    </section>
+
+    <section id="skills" class="about-section">
+        <h2>Skills</h2>
+        <p>Core Technologies: Java, OOP, SQL, ReactJS, Next.js, MongoDB, C++, HTML5, CSS3, JavaScript</p>
+        <p>Frameworks & Tools: Node.js, MySQL, Jetpack Compose (Android), Java EE</p>
+        <p>Special Expertise: Web Development, Full-Stack Solutions, VPN Systems, Attendance Management</p>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <h2>Projects</h2>
+
+        <div class="project-card">
+            <h3>CareerQuest</h3>
+            <p>An advanced job portal offering job listings, company profiles, and user profiles with robust search
+                capabilities.</p>
+            <a href="https://github.com/TheBMPatil/CareerQuest" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Healthcare System Database Design</h3>
+            <p>A comprehensive database system that manages patient records, appointments, and medical staff data.</p>
+            <a href="https://github.com/TheBMPatil" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Simple VPN Web Project</h3>
+            <p>A web-based VPN dashboard with location selection and a 'Connect' button for quick, secure access.</p>
+            <a href="https://github.com/TheBMPatil" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>Student Attendance System</h3>
+            <p>A QR code-based attendance system using Node.js and MySQL. It captures attendance with selfies and stores
+                data in Excel for efficient management.</p>
+            <a href="https://github.com/TheBMPatil" target="_blank">View on GitHub</a>
+        </div>
+
+        <div class="project-card">
+            <h3>News App (Android)</h3>
+            <p>An Android news application built with Kotlin and Jetpack Compose, offering user interest-based news
+                curation.</p>
+            <a href="https://github.com/TheBMPatil" target="_blank">View on GitHub</a>
+
+        </div>
+
+    </section>
+
+    <section id="services" class="services-section">
+        <h2>Services</h2>
+        <p>I offer a range of technology services to meet diverse business needs:</p>
+        <ul>
+            <li>Full-Stack Web and Mobile Development</li>
+            <li>Custom Software Solutions for Small Businesses</li>
+            <li>VPN and Secure Network Development</li>
+            <li>Attendance Management System Implementation</li>
+            <li>Tech Consulting and Project Outsourcing for Enterprises</li>
+        </ul>
+    </section>
+
+    <section id="testimonials" class="testimonials-section">
+        <h2>Testimonials</h2>
+        <blockquote>
+            <p>"Bhagvat's innovative solutions and technical expertise transformed our business operations. Highly
+                recommended!"</p>
+            <cite>- Client A</cite>
+        </blockquote>
+        <blockquote>
+            <p>"Efficient, reliable, and dedicated to delivering top-quality software—working with Bhagvat was a
+                game-changer."</p>
+            <cite>- Client B</cite>
+        </blockquote>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <h2>Contact Me</h2>
+        <p>Feel free to reach out for collaborations, consultations, or just a friendly hello!</p>
+        <a href="mailto:bmpatil.dev@gmail.com" class="contact-button">Email Me</a>
+        <div class="social-links">
+            <a href="https://github.com/TheBMPatil" target="_blank">GitHub</a> |
+            <a href="https://www.linkedin.com/in/thebmpatil" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <p>&copy; 2025 BM Patil. All Rights Reserved.</p>
+    </footer>
+    <script>
+        const cursor = document.createElement('div');
+        cursor.className = 'cursor';
+        document.body.appendChild(cursor);
+
+        document.addEventListener('mousemove', (e) => {
+            cursor.style.left = `${e.clientX}px`;
+            cursor.style.top = `${e.clientY}px`;
+
+            const trail = document.createElement('div');
+            trail.className = 'cursor-trail';
+            trail.style.left = `${e.clientX}px`;
+            trail.style.top = `${e.clientY}px`;
+            document.body.appendChild(trail);
+
+            setTimeout(() => trail.remove(), 500);
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
